@@ -28,6 +28,7 @@ header {
   padding: 0 50px;
   top: 0;
   z-index: 2;
+  position: fixed;
 }
 
 .navbar-list {
@@ -70,6 +71,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 80px;
 }
 
 /* SECTION HERO ****************************** */
@@ -224,9 +226,12 @@ main {
   color: var(--white);
   font-family: var(--font-family);
   display: flex;
-  justify-content: space-around;
-  padding: 70px 30px;
+  justify-content: center;
+  gap: 150px;
+  padding: 50px 30px;
   width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .contact-info-container {
@@ -247,4 +252,19 @@ main {
 .info-column a {
   text-decoration: none;
   color: var(--white);
+}
+
+iframe {
+  height: 150px;
+  width: 250px;
+  border-radius: 15px;
+}
+/* FOOTER ********************** */
+footer {
+  background-color: var(--black);
+  color: var(--white);
+
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
 }
