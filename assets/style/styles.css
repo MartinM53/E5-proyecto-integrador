@@ -16,16 +16,26 @@
   box-sizing: border-box;
 }
 
-/* NAVBAR ********************************* */
+/* HEADER ********************************* */
 
-.navbar {
-  height: 80px;
-  width: 100%;
+header {
   background-color: var(--black);
-  padding: 0 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  height: 80px;
+  padding: 0 50px;
+  top: 0;
+  z-index: 2;
+}
+
+.navbar-list {
+  gap: 32px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  list-style: none;
 }
 
 .navbar .logo {
@@ -34,35 +44,32 @@
   align-items: center;
 }
 
-.navbar .logo img {
+.logo img {
   height: 80px;
   width: 90%;
   min-width: 150px;
   min-width: 100px;
 }
 
-/* .menu {
-} */
-
-.menu ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
-  list-style: none;
-}
-
-.menu ul li {
-  color: var(--white);
+.navbar-list {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 40px;
 }
 
-.menu ul li a {
+.navbar-list a {
   text-decoration: none;
   color: var(--white);
   font-family: var(--font-family);
+}
+
+/* MAIN****** */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* SECTION HERO ****************************** */
@@ -77,12 +84,13 @@
   justify-content: center;
   align-items: center;
   /* max-width: 1600px; */
-  gap: 40px;
+  gap: 5px;
 }
-
+.hero__section-img {
+  padding: 0 0 0 50px;
+}
 .hero__section-img img {
   width: 400px;
-  /* padding: 50px; */
 }
 
 .hero__section-info {
@@ -91,8 +99,7 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
-
-  /* border: solid 2px; */
+  padding: 0 50px 0 50px;
 }
 
 .section-info-text {
@@ -130,7 +137,7 @@
 
 #about__section {
   padding: 40px;
-  background-color: var(--white);
+  /* background-color: var(--white); */
 }
 
 .about__container {
@@ -154,15 +161,15 @@
 
 /* SECTION CARDS ******************************************       */
 
-#cards-section {
+#cards__section {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   background: linear-gradient(to top, var(--white), var(--color1));
   /* background: var(--color1); */
   font-family: var(--font-family);
-  padding: 40px 0;
+  padding: 40px 10px;
 }
 
 .cards-container {
@@ -208,4 +215,36 @@
 .card-item p {
   color: var(--bg);
   font-weight: 800;
+}
+
+/* SECTION CONTACT */
+
+#contact__section {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-family);
+  display: flex;
+  justify-content: space-around;
+  padding: 70px 30px;
+  width: 100%;
+}
+
+.contact-info-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.info-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.info-column h3 {
+  font-weight: 600;
+  font-size: 24px;
+}
+.info-column a {
+  text-decoration: none;
+  color: var(--white);
 }
