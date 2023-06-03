@@ -41,8 +41,8 @@ html {
   gap: 20px;
   background-color: var(--black);
 
-  padding: 30px 1px;
-  width: 420px;
+  padding: 40px 15px;
+  width: 450px;
   border-radius: 20px;
 }
 
@@ -75,8 +75,8 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   border-radius: 15px;
-  gap: 1px;
   font-size: 14px;
   font-weight: 600;
   width: 100%;
@@ -107,5 +107,5 @@ html {
 
 .signin_link {
   color: var(--color1);
-  font-size: 12px;
+  font-size: 14px;
 }
