@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+:root {
+  --white: #fafafa;
+  --black: #1b262c;
+  --bg: #0f4c75;
+  --color1: #dde6ed;
+  --color2: #3282b8;
+
+  --font-family: "Montserrat", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-padding-top: 80px;
+  scroll-behavior: smooth;
+  /* background-color: var(--black); */
+  font-family: var(--font-family);
+}
+
+.signup__section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url(/assets/img/redd-f-REyoFHP9pw.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--black);
+
+  padding: 30px 1px;
+  width: 420px;
+  border-radius: 20px;
+}
+
+.signup-container img {
+  width: 190px;
+}
+
+.container-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: var(--color1);
+  width: 100%;
+}
+
+.container-form button {
+  background-color: var(--bg);
+  color: var(--white);
+  padding: 5px;
+  width: 70%;
+  border-radius: 5px;
+  border: solid 2px var(--color1);
+  font-family: var(--font-family);
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  gap: 1px;
+  font-size: 14px;
+  font-weight: 600;
+  width: 100%;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+
+  align-items: center;
+  text-decoration: none;
+
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px;
+  width: 190px;
+}
+
+.btn-1 {
+  background-color: var(--bg);
+  color: var(--color1);
+}
+.btn-2 {
+  background-color: var(--color1);
+  color: var(--black);
+}
+
+.signin_link {
+  color: var(--color1);
+  font-size: 12px;
+}

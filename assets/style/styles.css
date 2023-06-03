@@ -15,7 +15,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html {
+  scroll-padding-top: 80px;
+  scroll-behavior: smooth;
+}
 /* HEADER ********************************* */
 
 header {
@@ -29,27 +32,7 @@ header {
   top: 0;
   z-index: 2;
   position: fixed;
-}
-
-.navbar-list {
-  gap: 32px;
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  list-style: none;
-}
-
-.navbar .logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo img {
-  height: 80px;
-  width: 90%;
-  min-width: 150px;
-  min-width: 100px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 10, 10);
 }
 
 .navbar-list {
@@ -57,6 +40,26 @@ header {
   justify-content: center;
   align-items: center;
   gap: 40px;
+  list-style: none;
+}
+.navbar-list :hover {
+  transform: scale(1.2);
+  color: whitesmoke;
+  transition: 0.3s;
+}
+
+.navbar .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 200;
+}
+
+.logo img {
+  height: 80px;
+  width: 90%;
+  min-width: 150px;
+  min-width: 100px;
 }
 
 .navbar-list a {
@@ -72,6 +75,7 @@ main {
   justify-content: center;
   align-items: center;
   padding-top: 80px;
+  /* background-image: url(/assets/img/redd-f-REyoFHP9pw.jpg); */
 }
 
 /* SECTION HERO ****************************** */
@@ -93,6 +97,7 @@ main {
 }
 .hero__section-img img {
   width: 400px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 .hero__section-info {
@@ -132,7 +137,7 @@ main {
   color: var(--white);
   padding: 15px;
   border-radius: 2px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* SECTION ABOUT************************************************* */
@@ -161,6 +166,11 @@ main {
   text-align: center;
 }
 
+.about__container span {
+  font-weight: 600;
+  letter-spacing: initial;
+}
+
 /* SECTION CARDS ******************************************       */
 
 #cards__section {
@@ -172,6 +182,18 @@ main {
   /* background: var(--color1); */
   font-family: var(--font-family);
   padding: 40px 10px;
+}
+
+.hr1 {
+  border: 2px solid var(--bg);
+  width: 50px;
+  margin-bottom: 15px;
+}
+
+.hr2 {
+  border: 2px solid var(--bg);
+  width: 50px;
+  margin-top: 15px;
 }
 
 .cards-container {
@@ -199,6 +221,14 @@ main {
   width: 100%;
   height: 100%;
   border-radius: 20px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.card-product :hover {
+  transform: scale(1.2);
+  background-color: #ff6969;
+  transform: scale(1.05);
+  transition: 0.3s;
 }
 
 .card-info {
@@ -217,6 +247,25 @@ main {
 .card-item p {
   color: var(--bg);
   font-weight: 800;
+}
+
+.btn {
+  background-color: var(--bg);
+  color: var(--white);
+  text-decoration: none;
+  border: solid 1px var(--bg);
+  border-radius: 15px;
+  width: 100%;
+  height: 30px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn:hover {
+  /* transform: skew(50); */
+  transition: 0.2s;
+  background-color: var(--color2);
+  border: solid 2px var(--bg);
 }
 
 /* SECTION CONTACT */
@@ -263,7 +312,6 @@ iframe {
 footer {
   background-color: var(--black);
   color: var(--white);
-
   display: flex;
   justify-content: center;
   padding-bottom: 40px;
