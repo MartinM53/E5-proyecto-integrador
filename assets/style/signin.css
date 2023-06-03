@@ -22,15 +22,18 @@ html {
   font-family: var(--font-family);
 }
 
+main {
+  background: url(/assets/img/redd-f-REyoFHP9pw.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .signin__section {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url(/assets/img/redd-f-REyoFHP9pw.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 .signin-container {
   display: flex;
@@ -84,4 +87,15 @@ html {
   font-family: var(--font-family);
   cursor: pointer;
   font-size: 15px;
+}
+
+.back-top {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 30px;
+  color: var(--color1);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
 }

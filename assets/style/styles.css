@@ -68,6 +68,16 @@ header {
   font-family: var(--font-family);
 }
 
+.navbar i {
+  font-size: 36px;
+  color: var(--color1);
+  display: none;
+}
+
+#toogle-menu {
+  display: none;
+}
+
 /* MAIN****** */
 main {
   display: flex;
@@ -219,13 +229,14 @@ main {
 
 .cards-container {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   padding: 0 30px;
   gap: 20px;
   padding: 10px;
 }
+
 .info-card {
   width: 250px;
   border-radius: 15px;
@@ -331,4 +342,33 @@ footer {
   justify-content: center;
   padding-bottom: 40px;
   font-size: 13px;
+}
+
+/* MEDIA QUERIES FOR MENU HAMBURGUESA */
+
+@media (max-width: 576px) {
+  .navbar-list {
+    background-color: var(--black);
+    color: var(--black);
+
+    width: 100%;
+    height: calc(100vh- 80px);
+    padding: 30px 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    border-top: solid 2px var(--color1);
+  }
+}
+
+.navbar i {
+  display: block;
+}
+
+#toogle-menu:checked ~ .navbar-list {
+  display: flex;
 }
