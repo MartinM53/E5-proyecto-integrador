@@ -373,6 +373,7 @@ footer {
     justify-content: center;
     display: none;
     border-top: solid 2px var(--color1);
+    border-bottom: solid 2px var(--color1);
     transform: translateX(200%);
     transition: all zs ease-in;
   }

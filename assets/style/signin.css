@@ -20,6 +20,7 @@ html {
   scroll-behavior: smooth;
   /* background-color: var(--black); */
   font-family: var(--font-family);
+  height: 100vh;
 }
 
 main {
@@ -27,6 +28,7 @@ main {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  height: 100vh;
 }
 
 .signin__section {
