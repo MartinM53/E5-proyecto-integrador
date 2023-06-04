@@ -71,6 +71,7 @@ header {
 .navbar i {
   font-size: 36px;
   color: var(--color1);
+
   display: none;
 }
 
@@ -97,21 +98,26 @@ main {
 .hero__section {
   height: calc(100vh - 80px);
   background: linear-gradient(to bottom, var(--white), var(--color1));
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   width: 1100px;
-
   max-width: 1200px;
   gap: 5px;
 }
-.hero__section-img {
-  padding: 0 0 0 50px;
+
+.hero__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
 }
-.hero__section-img img {
+/* .hero__section-img {
+  padding: 0 0 0 0px;
+} */
+.hero__container img {
+  padding: 0 0 0 0px;
   width: 400px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
@@ -176,8 +182,13 @@ main {
 }
 
 .about__container {
-  max-width: 1200px;
-  margin: 0 auto;
+  /* max-width: 1200px; */
+  /* margin: 0 auto; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .about__container h2 {
@@ -211,7 +222,7 @@ main {
   /* background: var(--color1); */
   font-family: var(--font-family);
   padding: 40px 10px;
-  width: 1100px;
+  /* width: 1100px; */
   max-width: 1200px;
 }
 
@@ -229,9 +240,10 @@ main {
 
 .cards-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+
   padding: 0 30px;
   gap: 20px;
   padding: 10px;
@@ -344,13 +356,12 @@ footer {
   font-size: 13px;
 }
 
-/* MEDIA QUERIES FOR MENU HAMBURGUESA */
+/* MEDIA QUERIES FOR TABLET */
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
   .navbar-list {
     background-color: var(--black);
     color: var(--black);
-
     width: 100%;
     height: calc(100vh- 80px);
     padding: 30px 0;
@@ -362,13 +373,76 @@ footer {
     justify-content: center;
     display: none;
     border-top: solid 2px var(--color1);
+    transform: translateX(200%);
+    transition: all zs ease-in;
+  }
+
+  .navbar i {
+    display: block;
+  }
+
+  #toogle-menu:checked ~ .navbar-list {
+    display: flex;
+    transform: translateX(0%);
+    transition: all 2s ease-out;
+  }
+
+  .hero__section {
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  #about__section {
+    width: 100%;
   }
 }
 
-.navbar i {
-  display: block;
-}
+/* MEDIA QUERIES FOR MOBILE ********************* */
 
-#toogle-menu:checked ~ .navbar-list {
-  display: flex;
+@media (max-width: 480px) {
+  .hero__section {
+    background-image: url(/assets/img/urban-portada.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .hero__container img {
+    display: none;
+  }
+
+  .hero__container {
+    background-color: var(--color1);
+    border-radius: 15px;
+    /* margin-top: 50%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero__section-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* padding: 40px; */
+
+    background-color: var(--color1);
+    border-radius: 15px;
+  }
+
+  #contact__section {
+    gap: 30px;
+    padding: 50px 20px;
+  }
+
+  .contact-info-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+  }
 }
