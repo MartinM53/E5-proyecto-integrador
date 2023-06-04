@@ -58,7 +58,6 @@ header {
 .logo img {
   height: 80px;
   width: 90%;
-  min-width: 150px;
   min-width: 100px;
 }
 
@@ -71,7 +70,6 @@ header {
 .navbar i {
   font-size: 36px;
   color: var(--color1);
-
   display: none;
 }
 
@@ -86,11 +84,6 @@ main {
   justify-content: center;
   align-items: center;
   padding-top: 80px;
-  /* background-image: url(/assets/img/redd-f-REyoFHP9pw.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: center;
-  background-attachment: fixed; */
 }
 
 /* SECTION HERO ****************************** */
@@ -103,7 +96,6 @@ main {
   align-items: center; */
   width: 1100px;
   max-width: 1200px;
-  gap: 5px;
 }
 
 .hero__container {
@@ -113,12 +105,10 @@ main {
   align-items: center;
   padding: 50px;
 }
-/* .hero__section-img {
-  padding: 0 0 0 0px;
-} */
+
 .hero__container img {
   padding: 0 0 0 0px;
-  width: 400px;
+  width: 40%;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -143,6 +133,7 @@ main {
 .section-info-text h1 {
   font-size: 40px;
   color: var(--bg);
+  text-align: center;
 }
 
 .section-info-text h4 {
@@ -175,15 +166,12 @@ main {
     var(--color1),
     var(--white)
   );
-  /* background-color: var(--white); */
   width: 1100px;
   max-width: 1600px;
   /* color: var(--color1); */
 }
 
 .about__container {
-  /* max-width: 1200px; */
-  /* margin: 0 auto; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -200,9 +188,6 @@ main {
 
 .about__container p {
   font-family: var(--font-family);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
 }
 
@@ -263,7 +248,7 @@ main {
 
 .info-card img {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   border-radius: 20px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -399,6 +384,21 @@ footer {
     width: 100%;
   }
 
+  .section-info-text {
+    padding: 0;
+  }
+
+  .section-info-text h1 {
+    font-size: 34px;
+  }
+  .section-info-text h3 {
+    font-size: 16px;
+  }
+
+  .section-info-text h4 {
+    font-size: 13px;
+  }
+
   #about__section {
     width: 100%;
   }
@@ -422,12 +422,7 @@ footer {
     justify-content: flex-start;
     align-items: center;
     padding: 40px 10px;
-    /* background-color: var(--color1); */
-    /* background: linear-gradient(
-      0deg,
-       0%,
-      rgba(254, 253, 255, 0.5) 30%
-    ); */
+
     background-color: rgba(255, 255, 255, 0.85);
     border-radius: 15px;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
