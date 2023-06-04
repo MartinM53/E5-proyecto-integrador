@@ -421,15 +421,28 @@ footer {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 40px;
-    background-color: var(--color1);
+    padding: 40px 10px;
+    /* background-color: var(--color1); */
+    /* background: linear-gradient(
+      0deg,
+       0%,
+      rgba(254, 253, 255, 0.5) 30%
+    ); */
+    background-color: rgba(255, 255, 255, 0.85);
     border-radius: 15px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
   }
 
   .section-info-text h1 {
     font-size: 30px;
   }
+  .section-info-text h3 {
+    font-size: 16px;
+  }
 
+  .section-info-text h4 {
+    font-size: 13px;
+  }
   #contact__section {
     gap: 30px;
     padding: 50px 20px;
@@ -440,6 +453,11 @@ footer {
     justify-content: center;
     flex-direction: column;
     gap: 40px;
+  }
+
+  #about__section p {
+    display: flex;
+    flex-direction: row;
   }
 
   footer {
