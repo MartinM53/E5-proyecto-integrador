@@ -416,22 +416,17 @@ footer {
     display: none;
   }
 
-  .hero__container {
-    background-color: var(--color1);
-    border-radius: 15px;
-    /* margin-top: 50%; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   .hero__section-info {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    /* padding: 40px; */
-
+    padding: 40px;
     background-color: var(--color1);
     border-radius: 15px;
+  }
+
+  .section-info-text h1 {
+    font-size: 30px;
   }
 
   #contact__section {
@@ -444,5 +439,16 @@ footer {
     justify-content: center;
     flex-direction: column;
     gap: 40px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 40px;
+    font-size: 13px;
+    flex-wrap: wrap;
+    padding: 20px;
   }
 }
