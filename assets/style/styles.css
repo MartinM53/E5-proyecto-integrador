@@ -64,7 +64,6 @@ header {
 }
 .navbar-list :hover {
   transform: scale(1.2);
-  color: whitesmoke;
   transition: 0.3s;
 }
 
@@ -345,7 +344,7 @@ main {
   border: solid 2px var(--bg);
 }
 
-/* SECTION CONTACT */
+/* SECTION CONTACT ******************************************************/
 
 #contact__section {
   background: var(--black);
@@ -378,6 +377,10 @@ main {
 .info-column a {
   text-decoration: none;
   color: var(--white);
+}
+.info-column a:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 
 iframe {
