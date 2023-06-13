@@ -25,11 +25,11 @@ html {
   width: 15px;
   height: 50px;
   line-height: 55px;
-  bottom: 30px;
+  bottom: 50px;
   right: 60px;
   color: rgb(93, 133, 93);
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
   z-index: 2;
 }
 
