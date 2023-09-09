@@ -74,7 +74,7 @@ main {
   font-family: var(--font-family);
   cursor: pointer;
 }
-
+/* 
 .form {
   display: flex;
   justify-content: center;
@@ -84,9 +84,9 @@ main {
   font-size: 14px;
   font-weight: 600;
   width: 100%;
-}
+} */
 
-.btn {
+/* .btn {
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -107,7 +107,7 @@ main {
 .btn-2 {
   background-color: var(--color1);
   color: var(--black);
-}
+} */
 
 .signin_link {
   color: var(--color1);
