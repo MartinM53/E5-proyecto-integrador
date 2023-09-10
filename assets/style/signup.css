@@ -74,6 +74,28 @@ main {
   font-family: var(--font-family);
   cursor: pointer;
 }
+
+/* Error  y Success*/
+
+.form__field.error input {
+  border: 1px solid #fafafa;
+}
+
+.form__field small {
+  color: antiquewhite;
+  display: none;
+  text-align: center;
+}
+
+.form__field.success input {
+  border: 1px solid #3282b8;
+}
+
+.form__error {
+  color: antiquewhite;
+  display: none;
+  text-align: center;
+}
 /* 
 .form {
   display: flex;

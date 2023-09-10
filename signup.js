@@ -6,7 +6,7 @@ const passwordInput = document.getElementById(`password`);
 const phoneInput = document.getElementById(`phone`);
 
 // traemos a los usuarios del Local Storage. Si no hay, hacer un array vacío
-const users = JSON.parse(localStorage.getItem(`users`) || []);
+const users = JSON.parse(localStorage.getItem(`users`)) || [];
 
 // crear función para guardar usuarios en el local storage
 const saveToLocalStorage = () => {
