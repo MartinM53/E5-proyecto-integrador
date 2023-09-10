@@ -1,4 +1,4 @@
-const registerform = document.getElementById(`registerform`);
+const registerform = document.getElementById(`register-form`);
 const nameInput = document.getElementById(`name`);
 const lastNameInput = document.getElementById(`lastName`);
 const emailInput = document.getElementById(`email`);
@@ -53,7 +53,7 @@ const showError = (input, message) => {
   formField.classList.add(`error`); //VER CSS
   const error = formField.querySelector(`small`);
   error.style.display = "block";
-  error.textContent = "message";
+  error.textContent = message;
 };
 
 // función para mostrar success al validar un input
@@ -94,16 +94,16 @@ const checkEmail = (input) => {
 
   if (isEmpty(input)) {
     showError(input, `Este campo es obligatorio`);
-    return valid;
+    return;
   }
 
-  if (!isEMailValid(input)) {
+  if (!isEmailValid(input)) {
     showError(input, `El email ingresado no es válido`);
-    return valid;
+    return;
   }
   if (!isExistingEmail(input)) {
     showError(input, `El email ya se encuentra registrado`);
-    return valid;
+    return;
   } else showSuccess(input);
   valid = true;
   return valid;
@@ -159,4 +159,34 @@ const validateForm = (e) => {
   let isEmailValid = checkEmail(emailInput);
   let isPasswordValid = checkPassword(passwordInput);
   let isPhoneValid = checkPhone(phoneInput);
+
+  let isValidForm =
+    isNameValid &&
+    isLastNameValid &&
+    isEmailValid &&
+    isPasswordValid &&
+    isPhoneValid;
+
+  if (isValidForm)
+    users.push({
+      name: nameInput.value,
+      lastName: nameInput.value,
+      email: lastNameInput.value,
+      password: passwordInput.value,
+      phone: phoneInput.value,
+    });
+  saveToLocalStorage(users);
+  alert(`¡Te has registrado!`);
+  window.location.href = `signin.html`;
 };
+
+const init = () => {
+  registerform.addEventListener(`submit`, validateForm);
+  nameInput.addEventListener(`input`, () => checkTextInput(nameInput));
+  lastNameInput.addEventListener(`input`, () => checkTextInput(lastNameInput));
+  emailInput.addEventListener(`input`, () => checkEmail(emailInput));
+  passwordInput.addEventListener(`input`, () => checkPassword(passwordInput));
+  phoneInput.addEventListener(`input`, () => checkPhone(phoneInput));
+};
+
+init();
