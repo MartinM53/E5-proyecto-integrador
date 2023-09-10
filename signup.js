@@ -1,6 +1,6 @@
 const registerform = document.getElementById(`registerform`);
 const nameInput = document.getElementById(`name`);
-const lastNameinput = document.getElementById(`lastName`);
+const lastNameInput = document.getElementById(`lastName`);
 const emailInput = document.getElementById(`email`);
 const passwordInput = document.getElementById(`password`);
 const phoneInput = document.getElementById(`phone`);
@@ -14,7 +14,7 @@ const saveToLocalStorage = () => {
 };
 
 // crear función para chequear si el input está vacío
-const isEmpty = (Input) => {
+const isEmpty = (input) => {
   return !input.value.trim().length;
 };
 
@@ -30,7 +30,7 @@ const isEmailValid = (input) => {
 };
 
 // función para chequear si el mail ya existe en el array de usuarios
-const isExistingEmail = () => {
+const isExistingEmail = (input) => {
   return users.some((user) => user.email === input.value.trim());
 };
 
@@ -47,11 +47,116 @@ const isPhoneValid = (input) => {
 };
 
 // función para mostrar error al validar un input
-const shoError = (input, message) => {
+const showError = (input, message) => {
   const formField = input.parentElement;
-  formField.classList.remove(`success`);
-  formField.classList.add(`error`);
+  formField.classList.remove(`success`); //VER CSS
+  formField.classList.add(`error`); //VER CSS
   const error = formField.querySelector(`small`);
   error.style.display = "block";
   error.textContent = "message";
+};
+
+// función para mostrar success al validar un input
+const showSuccess = (input, message) => {
+  const formField = input.parentElement;
+  formField.classList.remove(`error`); //VER CSS
+  formField.classList.add(`success`); //VER CSS
+  const error = formField.querySelector(`small`);
+  error.textContent = "";
+};
+
+//función para validar un input tipo texto
+const checkTextInput = (input) => {
+  // setear la validez del value a retornar
+  const minCharacters = 3;
+  const maxCharacters = 16;
+
+  if (isEmpty(input)) {
+    showError(input, `Este campo es obligatorio`);
+    return false;
+  }
+
+  if (!isBetween(input, minCharacters, maxCharacters)) {
+    showError(
+      input,
+      `Este campo debe tener entre ${minCharacters} y ${maxCharacters} caracteres`
+    );
+    return false;
+  }
+
+  showSuccess(input);
+  return true;
+};
+
+//función para validar email
+const checkEmail = (input) => {
+  let valid = false;
+
+  if (isEmpty(input)) {
+    showError(input, `Este campo es obligatorio`);
+    return valid;
+  }
+
+  if (!isEMailValid(input)) {
+    showError(input, `El email ingresado no es válido`);
+    return valid;
+  }
+  if (!isExistingEmail(input)) {
+    showError(input, `El email ya se encuentra registrado`);
+    return valid;
+  } else showSuccess(input);
+  valid = true;
+  return valid;
+};
+
+//función para validar password
+
+const checkPassword = (input) => {
+  let valid = false;
+
+  if (isEmpty(input)) {
+    showError(input, `Por favor, elige una contraseña`);
+    return;
+  }
+  if (!isPassSecure(input)) {
+    showError(
+      input,
+      `La contraseña debe tener una mayúscula, una minúscula y entre 6 y 9 caracteres`
+    );
+    return;
+  }
+
+  showSuccess(input);
+  valid = true;
+  return valid;
+};
+
+//función para validar teléfono
+const checkPhone = (input) => {
+  let valid = false;
+  if (isEmpty(input)) {
+    showError(input, `Ingrese un número válido`);
+    return valid;
+  }
+  if (!isPhoneValid(input)) {
+    showError(input, `El número ingresao no es válido`);
+    return;
+  }
+
+  showSuccess(input);
+  valid = true;
+  return valid;
+};
+
+//Función general
+
+const validateForm = (e) => {
+  e.preventDefault();
+
+  //guardar estados de los inpur en las variables
+  let isNameValid = checkTextInput(nameInput);
+  let isLastNameValid = checkTextInput(lastNameInput);
+  let isEmailValid = checkEmail(emailInput);
+  let isPasswordValid = checkPassword(passwordInput);
+  let isPhoneValid = checkPhone(phoneInput);
 };
