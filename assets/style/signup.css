@@ -76,28 +76,53 @@ main {
 }
 
 /* Error  y Success*/
+.form__field {
+  display: flex;
+  flex-direction: column;
+  max-width: 20vh;
+}
 
 .form__field.error input {
-  border: 1px solid #fafafa;
+  border: 4px solid #3282b8;
+  border-radius: 5px;
 }
 
 .form__field small {
-  color: antiquewhite;
+  color: #4ba0da;
   display: none;
   text-align: center;
+  width: 35vh;
 }
 
 .form__field.success input {
   border: 1px solid #3282b8;
 }
 
-.form__error {
-  color: antiquewhite;
+#form__error {
+  color: rgb(209, 8, 8);
   display: none;
-  text-align: center;
+  text-align: right;
 }
-/* 
-.form {
+
+.form__container {
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form__container input {
+  padding: 5px;
+  border-radius: 5px;
+  width: 35vh;
+}
+
+.form__input__btn {
+  font-weight: 400;
+}
+
+/* .form {
   display: flex;
   justify-content: center;
   align-items: center;
