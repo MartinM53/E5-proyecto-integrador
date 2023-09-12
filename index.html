@@ -36,9 +36,31 @@
           <li><a href="./signup.html">Sign up</a></li>
         </ul>
       </nav>
+
+      <!-- CART -->
+      <div class="cart-label">
+        <i class="fa-solid fa-cart-shopping" style="color: #ffffff">
+          <div class="cart-bubble">0</div>
+        </i>
+      </div>
+
+      <div class="cart">
+        <h2>Tus productos</h2>
+        <div class="cart-container"></div>
+        <span class="divider"></span>
+        <div class="cart-total">
+          <p>Total</p>
+          <span class="total">66</span>
+        </div>
+        <button class="btn-buy">Buy</button>
+        <button class="btn-delete">Delete all products</button>
+      </div>
+
+      <div class="overlay"></div>
     </header>
 
     <main>
+      <!-- SECTION HERO -->
       <section class="hero__section">
         <div class="hero__container">
           <img
@@ -59,6 +81,7 @@
         </div>
       </section>
 
+      <!-- SECION ABOUT -->
       <section id="about__section">
         <div class="about__container">
           <h2>Who are we?</h2>
@@ -70,6 +93,24 @@
         </div>
       </section>
 
+      <!-- PRODUCTS SECTION -->
+      <section id="products">
+        <h2>BESTSELLERY</h2>
+        <!-- categories -->
+        <div class="categories">
+          <button class="category active">Todas</button>
+          <button class="category" data-category="summer">Summer</button>
+          <button class="category" data-category="winter">Winter</button>
+          <button class="category" data-category="autumn">Autumn</button>
+          <button class="category" data-category="spring">Spring</button>
+        </div>
+        <!-- productos -->
+        <div class="products-container"></div>
+        <!-- button ver más -->
+        <button class="btn-load">Ver más...</button>
+      </section>
+
+      <!-- CARDS SECTION
       <section id="cards__section">
         <hr class="hr1" />
         <h2>BESTSELLERY</h2>
@@ -125,8 +166,9 @@
             <button type="submit" class="btn">Add to cart</button>
           </div>
         </div>
-      </section>
+      </section> -->
 
+      <!-- SECTION CONTACTO -->
       <section id="contact__section">
         <div class="contact-info-container">
           <div class="info-column">
@@ -152,8 +194,12 @@
         ></iframe>
       </section>
     </main>
+    <!-- FOOTER -->
     <footer>
       Copyright © 2021 Urban Threads - Todos los derechos reservados.
     </footer>
+    <div class="add-modal"></div>
+    <script src="index.js"></script>
+    <script src="data.js"></script>
   </body>
 </html>

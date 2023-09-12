@@ -55,9 +55,26 @@ header {
   box-shadow: 0 0 15px 0 rgba(0, 0, 10, 10);
 }
 
+.cart-label {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+}
+
+.fa-cart-shopping {
+  display: flex;
+  align-items: end;
+  font-size: 30px;
+}
+
+.cart-bubble {
+  font-size: 15px;
+}
+
 .navbar-list {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   gap: 40px;
   list-style: none;
@@ -84,12 +101,14 @@ header {
   text-decoration: none;
   color: var(--white);
   font-family: var(--font-family);
+  font-size: 18px;
 }
 
 .navbar i {
   font-size: 36px;
   color: var(--color1);
   display: none;
+  align-items: end;
 }
 
 #toogle-menu {

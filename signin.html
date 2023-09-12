@@ -15,23 +15,44 @@
           <a class="container-image" href="/index.html"
             ><img src="./assets/img/logo_urban-removebg-preview.png" alt=""
           /></a>
-
-          <div class="container-form">
-            <input type="email" id="email" placeholder="Email or username" />
-            <input type="password" id="password" placeholder="Password" />
-            <div class="form-forgotpass">
-              <a class="forgotpass_link" href="#">Forgot your password?</a>
+          <form class="form__container" id="login--form" novalidate>
+            <!-- email  -->
+            <div class="form__field">
+              <input
+                type="email"
+                placeholder="Email"
+                class="form__input"
+                id="email"
+                autocomplete="off"
+              />
             </div>
 
-            <button>Sign in</button>
+            <!-- password -->
+            <div class="form__field">
+              <input
+                type="password"
+                placeholder="Password"
+                class="form__input"
+                id="password"
+                autocomplete="off"
+              />
+            </div>
+            <!-- small error -->
+            <small id="form_error"></small>
+
+            <!-- submit -->
+            <input type="submit" class="form__input__btn" value="Sign in" />
+
+            <!-- Sign up -->
             <div class="form-signup">
               <a class="signup_link" href="./signup.html"
                 >Not a member yet? Sign up</a
               >
             </div>
-          </div>
+          </form>
         </div>
       </section>
     </main>
+    <script src="signin.js"></script>
   </body>
 </html>

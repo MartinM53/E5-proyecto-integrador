@@ -120,8 +120,20 @@ main {
 
 .form__input__btn {
   font-weight: 400;
+  font-size: 16px;
+  border: solid 2px #fafafa;
+  background-color: #0f4c75;
+  cursor: pointer;
+  color: #fafafa;
 }
 
+.form-signin {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
 /* .form {
   display: flex;
   justify-content: center;
@@ -157,7 +169,7 @@ main {
 } */
 
 .signin_link {
-  color: var(--color1);
+  color: var(--white);
   font-size: 14px;
 }
 .back-top {

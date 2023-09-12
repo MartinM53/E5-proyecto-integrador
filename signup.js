@@ -121,7 +121,7 @@ const checkPassword = (input) => {
   if (!isPassSecure(input)) {
     showError(
       input,
-      `La contraseña debe tener una mayúscula, una minúscula y entre 6 y 9 caracteres`
+      `La contraseña debe tener una al menos 8 caracteres, mayúscula, una minúscula y un símbolo`
     );
     return;
   }
