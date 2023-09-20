@@ -89,23 +89,51 @@ const checkTextInput = (input) => {
 };
 
 //función para validar email
+
+// const checkEmail = (input) => {
+//   let valid = false;
+//   const emailValue = input.value.trim();
+
+//   if (isEmpty(input)) {
+//     showError(input, `Este campo es obligatorio`);
+//     return;
+//   }
+
+//   if (!isEmailValid(input)) {
+//     showError(input, `El email ingresado no es válido`);
+//     return;
+//   }
+//   if (!isExistingEmail(input)) {
+//     showError(input, `El email ya se encuentra registrado`);
+//     return;
+//   } else {
+//     showSuccess(input);
+//     valid = true;
+//   }
+//   return valid;
+// };
+
 const checkEmail = (input) => {
   let valid = false;
+  const emailValue = input.value.trim().toLowerCase(); // Trim leading/trailing spaces
 
   if (isEmpty(input)) {
     showError(input, `Este campo es obligatorio`);
     return;
   }
 
-  if (!isEmailValid(input)) {
+  if (!isEmailValid(emailValue)) {
     showError(input, `El email ingresado no es válido`);
     return;
   }
+
   if (!isExistingEmail(input)) {
     showError(input, `El email ya se encuentra registrado`);
     return;
-  } else showSuccess(input);
-  valid = true;
+  } else {
+    showSuccess(input);
+    valid = true;
+  }
   return valid;
 };
 
@@ -167,17 +195,18 @@ const validateForm = (e) => {
     isPasswordValid &&
     isPhoneValid;
 
-  if (isValidForm)
+  if (isValidForm) {
     users.push({
       name: nameInput.value,
-      lastName: nameInput.value,
-      email: lastNameInput.value,
+      lastName: lastNameInput.value,
+      email: emailInput.value,
       password: passwordInput.value,
       phone: phoneInput.value,
     });
-  saveToLocalStorage(users);
-  alert(`¡Te has registrado!`);
-  window.location.href = `signin.html`;
+    saveToLocalStorage(users);
+    alert(`¡Te has registrado!`);
+    window.location.href = `signin.html`;
+  }
 };
 
 const init = () => {
