@@ -8,7 +8,11 @@ const deleteBtn = document.querySelector(`.btn-delete`);
 const cartBubble = document.querySelector(`.cart-bubble`);
 const cartBtn = document.querySelector(`.cart-label`);
 const cartMenu = document.querySelector(`.cart`);
+const categoriesContainer = document.querySelector(".categories");
 // const menuBtn = document.querySelector(`.menu-label`);
+
+// Agrega event listener para las categorías
+categoriesContainer.addEventListener("click", applyFilter);
 
 // const barsMenu = document.querySelector(`.navbar-list`);
 
@@ -49,6 +53,11 @@ const renderProducts = (productList) => {
     .join("");
 };
 
+// Renderización de productos (agregado)
+const renderInitialProducts = () => {
+  renderProducts(appState.products[appState.currentProductIndex]);
+};
+
 //  boton ver más
 // verifica si está en el final de la lista
 const isLastIndexOf = () => {
@@ -80,7 +89,7 @@ const setShowMoreVisibility = () => {
 //lógica de los filtros
 
 // función para cambiar el estado de los botones del filtro/categorías
-const changeBtnActiveState = (salectedCategory) => {
+const changeBtnActiveState = (selectedCategory) => {
   const categories = [...categoriesList];
   categories.forEach((categoryBtn) => {
     if (categoryBtn.dataset.category !== selectedCategory) {
@@ -119,6 +128,7 @@ const renderFilteredProducts = () => {
   const filteredProducts = productsData.filter(
     (product) => product.category === appState.activeFilter
   );
+  renderProducts(filteredProducts);
 };
 
 //Menú interface

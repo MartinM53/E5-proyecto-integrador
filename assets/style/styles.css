@@ -273,7 +273,7 @@ main {
 
 /* SECTION CARDS ******************************************       */
 
-#cards__section {
+/* #cards__section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -357,10 +357,27 @@ main {
 }
 
 .btn:hover {
-  /* transform: skew(50); */
+
   transition: 0.2s;
   background-color: var(--bg);
   border: solid 2px var(--bg);
+} */
+
+/* SECTION PRODUCTS ******************************************************/
+
+#products h2 {
+  font-family: var(--font-family);
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+#products {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px;
 }
 
 /* SECTION CONTACT ******************************************************/

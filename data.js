@@ -2,48 +2,48 @@ const productsData = [
   {
     id: 1,
     name: "Sweater",
-    price: "$50000",
-    productImg: "./assest",
+    price: 5005,
+    productImg: "./assets/img/shirt01.jpg",
     category: "winter",
   },
 
   {
     id: 2,
     name: "Trousers",
-    price: "$50000",
-    productImg: "SVGDefsElement",
+    price: 50000,
+    productImg: "./assets/img/shirt01.jpg",
     category: "winter",
   },
 
   {
     id: 3,
     name: "Pullover",
-    price: "$50000",
-    productImg: "SVGDefsElement",
-    category: spring,
+    price: 1234,
+    productImg: "./assets",
+    category: "spring",
   },
 
   {
     id: 4,
     name: "Shirt",
-    price: "$50000",
-    productImg: "SVGDefsElement",
+    price: 1234,
+    productImg: "./assets/img/shirt01.jpg",
     category: "autumn",
   },
 
   {
     id: 5,
     name: "Shoes",
-    price: "$50000",
-    productImg: "./ass",
+    price: 1234,
+    productImg: "./assets/img/shirt01.jpg",
     category: "summer",
   },
 
   {
     id: 6,
     name: "hats",
-    price: "$50000",
-    productImg: "./ass",
+    price: 1234,
+    productImg: "./assets/img/shirt01.jpg",
     category: "winter",
   },
 ];
