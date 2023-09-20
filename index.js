@@ -32,7 +32,7 @@ const createProductTemplate = (product) => {
       <button class="btn-add">
           data-id="${id}"   
           data-name="${name}"  
-          data-price="${precio}"  
+          data-price="${price}"  
           data-img="${productImg}"  
      > Add
       </button>
@@ -83,7 +83,7 @@ const setShowMoreVisibility = () => {
 const changeBtnActiveState = (salectedCategory) => {
   const categories = [...categoriesList];
   categories.forEach((categoryBtn) => {
-    if (categoryBtn.CDATA_SECTION_NODE.category !== selectedCategory) {
+    if (categoryBtn.dataset.category !== selectedCategory) {
       categoryBtn.classList.remove("active");
       return;
     }
@@ -101,9 +101,9 @@ const changeFilterState = (btn) => {
 
 const applyFilter = (event) => {
   const { target } = event;
-  if (!isInactiveFilterBtn(target));
-  return;
+  if (!isInactiveFilterBtn(target)) return;
   productsContainer.innerHTML = "";
+  changeFilterState(target);
 
   if (appState.activeFilter) {
     renderFilteredProducts();
@@ -237,7 +237,7 @@ const createCartProduct = (product) => {
 
 const showSuccesModal = (msg) => {
   successModal.classList.add("active-modal");
-  successModal.tectContent = msg;
+  successModal.textContent = msg;
   setTimeout(() => {
     successModal.classList.remove("active-modal");
   }, 1500);
@@ -338,3 +338,29 @@ const deleteCart = () => {
     "no hay productos en el carrito"
   );
 };
+
+const init = () => {
+  renderProducts(appState.products[0]);
+
+  showMoreBtn.addEventListener("click", showMoreProducts);
+  categoriesContainer.addEventListener("click", applyFilter);
+
+  cartBtn.addEventListener("click", toggleCart);
+  menuBtn.addEventListener("click", toggleMenu);
+
+  window.addEventListener("click", closeOnScroll);
+  barsMenu.addEventListener("click", closeonScroll);
+  overlay.addEventListener("click", closeOnOverlayClick);
+
+  document.addEventListener("DOMContentLoaded", renderCartroducts);
+  document.addEventListener("DOMContentLoaded", showCartTotal);
+  productsContainer.addEventListener("click", addProduct);
+  productsCart.addEventListener("click", handleQuantity);
+
+  buyBtn.addEventListener("click", completeBuy);
+  deleteBtn.addEventListener("click", deleteCart);
+  disableBtn(buyBtn);
+  disableBtn(deleteBtn);
+  renderCartBubble(cart);
+};
+init();
