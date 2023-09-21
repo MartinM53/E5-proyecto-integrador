@@ -53,7 +53,7 @@ const divideProductsInParts = (size) => {
   //el array vacío nos sirve para retornar la lista de productos
   let productList = [];
   for (let i = 0; i < productsData.length; i += size) {
-    productsList.push(productsData.slice(i, i + size));
+    productList.push(productsData.slice(i, i + size));
   }
   return productList;
 };
